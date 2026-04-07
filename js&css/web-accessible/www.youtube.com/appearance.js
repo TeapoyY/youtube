@@ -27,6 +27,15 @@ ImprovedTube.YouTubeExperiments = function () {
 		}
 	} else { console.log ("yt.config_.EXPERIMENT_FLAGS is not yet defined") } 
 	}
+
+	// Square thumbnails: remove rounded corners from video thumbnails
+	if (this.storage.square_thumbnails === true && window.yt?.config_?.EXPERIMENT_FLAGS) {
+		if (window.yt.config_.EXPERIMENT_FLAGS.web_rounded_thumbnails !== false) {
+			try {
+				Object.defineProperty(window.yt.config_.EXPERIMENT_FLAGS, 'web_rounded_thumbnails', { get: () => false });
+			} catch (error) { console.error("can't set square thumbnails", error); }
+		}
+	}
 }
 /*try {
 		yt.config_.EXPERIMENT_FLAGS.kevlar_watch_grid = false;

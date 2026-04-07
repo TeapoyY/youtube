@@ -968,6 +968,11 @@ extension.skeleton.main.layers.section.appearance.on.click.comments = {
 				text: 'squaredUserImages',
 				tags: 'avatar'
 			},
+			square_thumbnails: {
+				component: 'switch',
+				text: 'squareThumbnails',
+				tags: 'thumbnail,rounded,corners'
+			},
 			hide_author_avatars: {
 				component: "switch",
 				text: 'hide_author_avatars'

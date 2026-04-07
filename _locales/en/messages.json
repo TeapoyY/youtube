@@ -1397,6 +1397,9 @@
   "squaredUserImages": {
     "message": "Squared user images"
   },
+  "squareThumbnails": {
+    "message": "Square thumbnails"
+  },
   "static": {
     "message": "Static"
   },
